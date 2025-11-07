@@ -1,6 +1,6 @@
 # Uparjon AI - AI-Powered Fintech Platform
 
-> A comprehensive full-stack fintech platform empowering freelancers with AI-driven task verification, instant payments, credit scoring, fraud detection, gamification, and Web3 rewards.
+> A comprehensive full-stack fintech platform which will empower freelancers with AI-driven task verification, instant payments, credit scoring, fraud detection, gamification, and Web3 rewards.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -18,12 +18,8 @@
 - [Installation & Setup](#installation--setup)
 - [Running the Application](#running-the-application)
 - [Project Structure](#project-structure)
-- [Key Features Detailed](#key-features-detailed)
 - [API Documentation](#api-documentation)
 - [Database Schema](#database-schema)
-- [Configuration](#configuration)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
@@ -206,15 +202,6 @@ pnpm dev
 cd backend && python -m uvicorn main:app --reload --port 8000
 ```
 
-### First Time Setup
-
-1. Open **http://localhost:3000**
-2. Click **"Sign Up"** to create an account
-3. Fill in your details (name, email, password)
-4. Login with your credentials
-5. Explore the dashboard!
-
----
 
 ## 📁 Project Structure
 
@@ -286,94 +273,6 @@ uparjon-ai/
 └── README.md                   # This file
 ```
 
----
-
-## 🎯 Key Features Detailed
-
-### 1. AI Chat Assistant
-
-**Location**: Dashboard → AI Chat tab
-
-**Features**:
-- 💬 Intelligent conversation powered by Groq AI (Llama 3.3 70B)
-- 📁 **File Upload Support** - Attach up to 5 files (10MB each)
-  - Supported formats: Images, PDFs, Word docs, spreadsheets, text files
-  - Visual file preview before sending
-  - File metadata displayed in chat bubbles
-- 🗂️ **Chat History Management**
-  - Multiple chat sessions with unique IDs
-  - View all previous conversations
-  - Load and continue past chats
-  - Delete individual chat sessions
-- 🎯 **Analysis Types**:
-  - General workplace questions
-  - Performance optimization
-  - Team dynamics
-  - Strategic planning
-  - Conflict resolution
-- 🔄 **New Chat** - Start fresh conversations anytime
-
-**How to Use**:
-1. Click "AI Chat" in sidebar
-2. Select analysis type (General, Performance, Team, etc.)
-3. Optional: Click 📎 to attach files
-4. Type your message or send files alone
-5. View responses with context-aware insights
-6. Access chat history anytime via "Chat History" button
-
-### 2. Gamification System
-
-**Location**: Dashboard → Gamification tab
-
-**Achievements**:
-- 🏆 **Task Master** - Complete 10 tasks (50 points)
-- ⚡ **Speed Demon** - Complete task in under 1 hour (30 points)
-- ⭐ **Perfect Score** - Achieve 100% approval rating (100 points)
-- 👥 **Leadership** - Help 5 team members (75 points)
-
-**Leaderboard**:
-- Global rankings by total points
-- Streak tracking (consecutive days active)
-- Top 10 users display
-- Real-time rank updates
-
-### 3. Web3 & Crypto Rewards
-
-**Location**: Dashboard → Web3 Rewards tab
-
-**Features**:
-- Connect MetaMask or WalletConnect
-- Earn WPAY tokens ($0.05 USD per token)
-- Mint NFT badges for achievements
-- View transaction history
-- Track wallet balance
-
-### 4. Security & Compliance
-
-**Two-Factor Authentication**:
-- QR code generation for authenticator apps
-- Backup codes for account recovery
-- Enable/disable 2FA in settings
-
-**Audit Logs**:
-- Track all user actions
-- IP address logging
-- Resource modification tracking
-
-**RBAC**:
-- Admin: Full system access
-- Manager: Team management
-- User: Standard access
-
-### 5. Advanced Analytics
-
-**Features**:
-- Generate custom reports filtered by date range, status, category
-- Export reports as CSV or JSON
-- ROI Calculator for project forecasting
-- Visual charts for trends and metrics
-
----
 
 ## 📡 API Documentation
 
@@ -466,31 +365,6 @@ The SQLite database (`uparjonai.db`) includes 30+ tables:
 ### Reports
 - `reports` - Generated custom reports
 - `export_logs` - Export history tracking
-
----
-
-## ⚙️ Configuration
-
-### Environment Variables
-
-Create `.env.local` in root directory:
-
-```env
-# Groq AI API Key (Required)
-GROQ_API_KEY=your_groq_api_key_here
-
-# Optional: Database path
-DATABASE_URL=./uparjonai.db
-```
-
-
-
-### Database
-
-- **Type**: SQLite
-- **File**: `uparjonai.db` (auto-created)
-- **Location**: Project root directory
-- **Backup**: Recommended to backup `.db` file regularly
 
 ---
 
